@@ -1,0 +1,10 @@
+name: Installtion of Java
+on: push
+
+jobs:
+  java-installtion:
+   name: java 8
+   runs-on: ubuntu-latest
+   steps:
+    - name: Installtion java with command
+      run: yum install java -y
