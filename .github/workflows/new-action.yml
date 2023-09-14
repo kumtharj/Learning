@@ -1,0 +1,19 @@
+name: Run script to check Linux distribution version
+on:
+  pull:
+    branches:
+      - master
+
+jobs:
+  check-Linux-os-version:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v3
+
+       - name: Run Shell script
+         run: |
+             chmod +x ${pwd}/check-os-version.sh
+              ${pwd}/check-os-version.sh
+             
+            
+
